@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 //routes
 app.use('/api/employees',require('./routes/employee.routes'));
-//starting the server :)
+//starting the server 
 
 app.listen(app.get('port'), () => {
     console.log("Servidor en el puerto ", app.get("port"));
