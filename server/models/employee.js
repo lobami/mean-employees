@@ -6,4 +6,4 @@ const EmployeeSchema = new Schema({
     office: { type: String, required: true},
     salary: { type: Number, required: true}
 });
-module.exports = mongoose.model('Employee', EmployeeSchema);
+module.exports = mongoose.model('Employee', EmployeeSchema); //asas
