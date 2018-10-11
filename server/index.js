@@ -8,7 +8,7 @@ app.set('port', process.env.PORT || 3001);
 app.use(morgan('dev'));
 app.use(express.json());
 //routes
-app.use(require('./routes/employee.routes'));
+app.use('/api/employees',require('./routes/employee.routes'));
 //starting the server
 
 app.listen(app.get('port'), () => {
