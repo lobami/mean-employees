@@ -1,19 +1,26 @@
 const EmployeeCtrl = {};
-EmployeeCtrl.getEmployees = (req, res) => {
+const Employee = require('../models/employee');
+EmployeeCtrl.getEmployees = async (req, res) => {
+    const employees = await Employee.find();
+    res.json(employees);
+    
+};
+EmployeeCtrl.createEmployee = async (req, res) =>{
+    const employee = new Employee(req.body);
+    await employee.save();
     res.json({
-        status: 'los empleados iran aqui'
+        'status': 'empleado guardado'
     });
-}
-EmployeeCtrl.createEmployee = function(){
+    
 
-}
+;}
 EmployeeCtrl.getEmployee = function(){
 
-}
+};
 EmployeeCtrl.editEmployee = function(){
 
-}
+};
 EmployeeCtrl.delateEmployee = function(){
     
-}
+};
 module.exports = EmployeeCtrl;
